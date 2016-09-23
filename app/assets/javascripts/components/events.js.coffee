@@ -1,6 +1,6 @@
 @Events = React.createClass
   getInitialState: ->
-    events: @props.events
+    events: @props.data
 
   getDefaultProps: ->
     events: []
@@ -13,11 +13,13 @@
   updateEvent: (event, data) ->
     index = @state.events.indexOf event
     events = React.addons.update(@state.events, { $splice: [[index, 1, data]] })
+    @props.handleEventRefresh events
     @replaceState events: events
 
   deleteEvent: (event) ->
     index = @state.events.indexOf event
     events = React.addons.update(@state.events, { $splice: [[index, 1]] })
+    @props.handleEventRefresh events
     @replaceState events: events
 
   render: ->
@@ -26,10 +28,14 @@
       React.DOM.h2
         className: 'name'
         'Events'
-      React.createElement EventForm, handleNewEvent: @addEvent
       React.DOM.hr null
-      React.DOM.section
+      React.DOM.div
         className: "row"
-        for event in @state.events
-          React.createElement Event, key: event.id, event: event,
-          handleDeleteEvent: @deleteEvent, handleEditEvent: @updateEvent
+        React.DOM.aside
+          className: "col s3"
+          React.createElement EventForm, handleNewEvent: @addEvent
+        React.DOM.section
+          className: "col s9"
+          for event in @state.events
+            React.createElement Event, key: event.id, event: event,
+             handleDeleteEvent: @deleteEvent, handleEditEvent: @updateEvent

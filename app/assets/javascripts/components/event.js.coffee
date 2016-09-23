@@ -37,91 +37,108 @@
 
   eventRow: ->
     React.DOM.div
-      className: "col s12 m7"
-      React.DOM.h3
-        className: "header"
-        @props.event.name
+      className: "col s12 m6"
+      React.DOM.div
+        className: "card"
         React.DOM.div
-          className: "card horizontal"
-          React.DOM.div
-            className: "card-image"
-            React.DOM.img
-              src: "http://lorempixel.com/100/190/nature/6"
-          React.DOM.div
-            className: "card-stacked"
-            React.DOM.div
-              className: "card-content"
-              React.DOM.p null, @props.event.description
-              React.DOM.p null, @props.event.date
-              React.DOM.p null, @props.event.street
-              React.DOM.p null, @props.event.city
-              React.DOM.p null, @props.event.state
-              React.DOM.p null, @props.event.zip_code
-              React.DOM.div
-                className: "card-action">
-                React.DOM.a
-                  className: 'waves-effect waves-light btn'
-                  onClick: @handleToggle
-                  React.DOM.i
-                    className: 'material-icons'
-                    "mode_edit"
-                React.DOM.a
-                  className: 'btn btn-danger'
-                  onClick: @handleDelete
-                  React.DOM.i
-                    className: 'material-icons'
-                    "delete_forever"
+          className: "card-image waves-effect waves-block waves-light"
+          React.DOM.img
+            className: "activator"
+            src: "../images/coffee.jpeg"
+        React.DOM.div
+          className: "card-content"
+          React.DOM.span
+            className: "card-title activator grey-text text-darken-4"
+            @props.event.name
+            React.DOM.i
+              className: "material-icons right"
+              "more_vert"
+          React.DOM.hr null
+          React.DOM.p
+            React.DOM.a
+              href: "#"
+              #make this "add to your events function"
+              "This is a link"
+        React.DOM.div
+          className: "card-reveal"
+          React.DOM.span
+            className: "card-title grey-text text-darken-4"
+            @props.event.name
+            React.DOM.i
+              className: "material-icons right"
+              "close"
+          React.DOM.p
+            @props.event.description
+          React.DOM.p null, @props.event.date
+          React.DOM.p null, @props.event.street
+          React.DOM.p null, @props.event.city
+          React.DOM.p null, @props.event.state
+          React.DOM.p null, @props.event.zip_code
+          React.DOM.a
+            className: 'waves-effect waves-light btn'
+            onClick: @handleToggle
+            React.DOM.i
+              className: 'material-icons'
+              "mode_edit"
+          React.DOM.a
+            className: 'waves-effect waves-light btn'
+            onClick: @handleDelete
+            React.DOM.i
+              className: 'material-icons'
+              "delete_forever"
   eventForm: ->
     React.DOM.div
-      className: "col s12 m7"
+      className: "col s12 m4"
       React.DOM.div
         className: "row"
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "text"
             defaultValue: @props.event.name
             ref: 'name'
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "datetime"
             defaultValue: @props.event.date
             ref: 'date'
+        React.DOM.br
+
         React.DOM.div
-          className: "input-field col s6"
-          React.DOM.input
-            className: "validate"
+          className: "input-field col s12"
+          React.DOM.textarea
+            className: "materialize-textarea "
             type: "text"
             defaultValue: @props.event.description
             ref: 'description'
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "text"
             defaultValue: @props.event.street
             ref: 'street'
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "text"
             defaultValue: @props.event.city
             ref: 'city'
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "text"
             defaultValue: @props.event.state
             ref: 'state'
         React.DOM.div
-          className: "input-field col s6"
+          className: "input-field col s12"
           React.DOM.input
-            className: "validate"
+            className: ""
             type: "text"
             defaultValue: @props.event.zip_code
             ref: 'zip_code'
