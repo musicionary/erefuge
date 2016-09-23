@@ -12,9 +12,19 @@
     min-height: 400px;
   }
   h1 {
-    padding-top: 60px;
+    font-size: 4em;
+    padding-top: 100px;
     @media (max-width: 1199px) {
-      padding-top: 65px;
+      padding-top: 110px;
     }
+    @media (max-width: 768px) {
+      font-size: 2.5em;
+    }
+  }
+  hr {
+    background: #f05f40;
+    max-width: 50px;
+    height: 3px;
+    border-color: #f05f40;
   }
 }
