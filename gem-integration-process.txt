@@ -1,0 +1,31 @@
+Run: rails new project-name
+
+Run: bundle install
+
+Run: rails db:create
+
+Run: rails generate rspec:install
+
+Add to spec/rails_helper.rb:
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
+
+Run: rails g create_migration table_name
+
+Run: rails db:migrate db:test:prepare
+
+Create models folder in spec directory.  Add validations to model name.  Add model in app/ and add validates_presence_of 'column-names'
+
+Add resources :table_name to config/routes.rb
+
+SIMPLE FORM:
+
+gem 'simple_form'
+Run the following command to install it:
+  bundle install
+Run the generator:
+  rails generate simple_form:install
