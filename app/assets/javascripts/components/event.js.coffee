@@ -102,7 +102,7 @@
           className: "input-field col s12"
           React.DOM.input
             className: ""
-            type: "datetime"
+            type: "datetime-local"
             defaultValue: @props.event.date
             ref: 'date'
         React.DOM.br

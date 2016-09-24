@@ -20,8 +20,7 @@
     , 'JSON'
 
   valid: ->
-    @state.name && @state.date && @state.description && @state.street &&
-    @state.city && @state.state && @state.zip_code
+    @state.name && @state.date && @state.description && @state.street && @state.city && @state.state && @state.zip_code
 
   render: ->
     React.DOM.form
@@ -32,7 +31,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'text'
-            className: 'validate'
             placeholder: 'Name'
             name: 'name'
             value: @state.name
@@ -41,7 +39,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'datetime-local'
-            className: 'validate'
             placeholder: 'Date'
             name: 'date'
             value: @state.date
@@ -58,7 +55,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'text'
-            className: 'validate'
             placeholder: 'Street'
             name: 'street'
             value: @state.street
@@ -67,7 +63,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'text'
-            className: 'validate'
             placeholder: 'City'
             name: 'city'
             value: @state.city
@@ -76,7 +71,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'text'
-            className: 'validate'
             placeholder: 'State'
             name: 'state'
             value: @state.state
@@ -85,7 +79,6 @@
           className: 'input-field col s12'
           React.DOM.input
             type: 'text'
-            className: 'validate'
             placeholder: 'Zip code'
             name: 'zip_code'
             value: @state.zip_code
