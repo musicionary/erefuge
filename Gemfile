@@ -16,6 +16,7 @@ gem 'haml'
 gem 'html2haml'
 gem 'simple_form'
 gem 'react-rails', '~> 1.0'
+gem 'devise'
 
 
 group :development, :test do
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 group :development do

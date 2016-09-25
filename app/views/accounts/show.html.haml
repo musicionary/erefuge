@@ -1,0 +1,10 @@
+%p= @account.first_name
+%p= @account.last_name
+
+%p
+  = link_to "Edit", edit_account_path(@account)
+%p
+  = link_to "Delete", account_path(@account), :data => {:confirm => "You sure?", :method => "delete"}
+
+%p
+  = link_to "Edit User Info", edit_user_registration_path(current_user)
