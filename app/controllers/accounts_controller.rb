@@ -11,6 +11,7 @@ class AccountsController < ApplicationController
   end
 
   def create
+    current_user
     @account = Account.new(account_params)
     @account.user_id = current_user.id
     if @account.save

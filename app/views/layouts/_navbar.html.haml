@@ -8,25 +8,21 @@
         - if current_user
           %li.nav-link
             = link_to "Log Out", destroy_user_session_path, {:class => "black-text", :method => :delete}
+          - if current_user.admin?
+            %li= link_to "Admin", rails_admin_path
         - else
           %li.nav-link
             = link_to "Sign In", new_user_session_path, {:class => "black-text"}
           %li.nav-link
             = link_to "Sign Up", new_user_registration_path, {:class => "black-text"}
-        %li
-          %a{:href => "sass.html", :class => "black-text"} Sass
-        %li
-          %a{:href => "badges.html", :class => "black-text"} Components
-        %li
-          %a{:href => "collapsible.html", :class => "black-text"} Javascript
-        %li
-          %a{:href => "mobile.html", :class => "black-text"} Mobile
       %ul#mobile-demo.side-nav
-        %li
-          %a{:href => "sass.html"} Sass
-        %li
-          %a{:href => "badges.html"} Components
-        %li
-          %a{:href => "collapsible.html"} Javascript
-        %li
-          %a{:href => "mobile.html"} Mobile
+        -# - if current_user
+        -#   %li.nav-link
+        -#     = link_to "Log Out", destroy_user_session_path, {:class => "black-text", :method => :delete}
+        -# - if current_user.admin?
+        -#       %li= link_to "Admin", rails_admin_path
+        -# - else
+        -#   %li.nav-link
+        -#     = link_to "Sign In", new_user_session_path, {:class => "black-text"}
+        -#   %li.nav-link
+        -#     = link_to "Sign Up", new_user_registration_path, {:class => "black-text"}

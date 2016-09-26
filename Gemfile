@@ -17,6 +17,8 @@ gem 'html2haml'
 gem 'simple_form'
 gem 'react-rails', '~> 1.0'
 gem 'devise'
+gem 'cancancan'
+gem 'rails_admin', '~> 1.0'
 
 
 group :development, :test do

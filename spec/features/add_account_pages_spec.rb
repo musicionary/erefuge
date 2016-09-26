@@ -16,7 +16,7 @@ describe "the new account path" do
 
   it "fails to create new account if fields are blank" do
     visit root_path
-    user = FactoryGirl.create(:confirmed_user)
+    user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit new_account_path
     click_button "Create Account"

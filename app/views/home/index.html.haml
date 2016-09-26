@@ -3,7 +3,8 @@
     %h1.center-align.white-text Connecting Refugees With Locals
     %hr
     %p.center-align.white-text.col.s8.offset-s2 ERefuge connects locals with refugees for simple social interactions. This could be an afternoon coffee, walk in the park, a visit to a museum or whatever your saturday afternoon brings you.
-    %a{class: "col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn-large hero-signup center-align", :href => "#"} Sign Up
+    = link_to "Create A New Account Now", new_user_registration_path, {:class => "col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn-large hero-signup center-align"}
+
 
 %section#about.bg-primary
   .container

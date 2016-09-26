@@ -29,3 +29,13 @@ Run the following command to install it:
   bundle install
 Run the generator:
   rails generate simple_form:install
+
+CANCANCAN:
+
+gem 'cancancan'
+rails g cancan:ability
+
+add to ApplicationController:
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_path, :alert => exception.message
+  end
