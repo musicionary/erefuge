@@ -23,8 +23,8 @@
     React.DOM.div
       className: 'events'
       React.DOM.h2
-        className: 'name'
-        'Events'
+        className: 'name center-align'
+        'Upcoming Events'
       React.DOM.hr null
       React.DOM.div
         className: "row"

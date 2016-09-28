@@ -6,7 +6,8 @@
         %i.material-icons menu
       %ul.right.hide-on-med-and-down
         - if current_user
-          %li= link_to "Your Account", account_path(current_user.account), {:class => "black-text"}
+          - if current_user.account
+            %li= link_to "Your Account", account_path(current_user.account), {:class => "black-text"}
           %li= link_to "Events", events_path, {:class => "black-text"}
           %li= link_to "Log Out", destroy_user_session_path, {:class => "black-text nav-link", :method => :delete}
           - if current_user.admin?

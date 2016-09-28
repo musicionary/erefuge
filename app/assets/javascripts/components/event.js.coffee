@@ -88,72 +88,76 @@
               "delete_forever"
   eventForm: ->
     React.DOM.div
-      className: "col s12 m4"
+      className: "col s12 m6"
       React.DOM.div
-        className: "row"
+        className: "card"
         React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "text"
-            defaultValue: @props.event.name
-            ref: 'name'
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "datetime-local"
-            defaultValue: @props.event.date
-            ref: 'date'
-        React.DOM.br
+          className: "row"
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "text"
+              defaultValue: @props.event.name
+              ref: 'name'
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "datetime-local"
+              defaultValue: @props.event.date
+              ref: 'date'
+          React.DOM.br
 
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.textarea
-            className: "materialize-textarea"
-            type: "text"
-            defaultValue: @props.event.description
-            ref: 'description'
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "text"
-            defaultValue: @props.event.street
-            ref: 'street'
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "text"
-            defaultValue: @props.event.city
-            ref: 'city'
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "text"
-            defaultValue: @props.event.state
-            ref: 'state'
-        React.DOM.div
-          className: "input-field col s12"
-          React.DOM.input
-            className: ""
-            type: "text"
-            defaultValue: @props.event.zip_code
-            ref: 'zip_code'
-        React.DOM.a
-          className: 'waves-effect waves-light btn'
-          onClick: @handleEdit
-          React.DOM.i
-            className: 'material-icons'
-            "done"
-        React.DOM.a
-          className: 'btn btn-danger'
-          onClick: @handleToggle
-          React.DOM.i
-            className: 'material-icons'
-            "clear"
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.textarea
+              className: "materialize-textarea"
+              type: "text"
+              defaultValue: @props.event.description
+              ref: 'description'
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "text"
+              defaultValue: @props.event.street
+              ref: 'street'
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "text"
+              defaultValue: @props.event.city
+              ref: 'city'
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "text"
+              defaultValue: @props.event.state
+              ref: 'state'
+          React.DOM.div
+            className: "input-field col s12"
+            React.DOM.input
+              className: ""
+              type: "text"
+              defaultValue: @props.event.zip_code
+              ref: 'zip_code'
+          React.DOM.div
+            className: "row container"
+            React.DOM.a
+              className: 'col s6 waves-effect waves-light btn'
+              onClick: @handleEdit
+              React.DOM.i
+                className: 'material-icons'
+                "done"
+            React.DOM.a
+              className: 'col s6 waves-effect waves-light btn'
+              onClick: @handleToggle
+              React.DOM.i
+                className: 'material-icons'
+                "clear"
   render: ->
     if @state.edit
       @eventForm()
