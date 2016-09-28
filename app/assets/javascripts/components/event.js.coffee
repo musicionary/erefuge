@@ -110,7 +110,7 @@
         React.DOM.div
           className: "input-field col s12"
           React.DOM.textarea
-            className: "materialize-textarea "
+            className: "materialize-textarea"
             type: "text"
             defaultValue: @props.event.description
             ref: 'description'

@@ -7,19 +7,16 @@
 
   addEvent: (event) ->
     events = React.addons.update(@state.events, { $push: [event] })
-    # @props.handleEventRefresh events
     @setState events: events
 
   updateEvent: (event, data) ->
     index = @state.events.indexOf event
     events = React.addons.update(@state.events, { $splice: [[index, 1, data]] })
-    # @props.handleEventRefresh events
     @replaceState events: events
 
   deleteEvent: (event) ->
     index = @state.events.indexOf event
     events = React.addons.update(@state.events, { $splice: [[index, 1]] })
-    # @props.handleEventRefresh events
     @replaceState events: events
 
   render: ->
