@@ -13,11 +13,9 @@
   }
   h1 {
     font-size: 4em;
-    padding-top: 100px;
-    @media (max-width: 1199px) {
-      padding-top: 110px;
-    }
+    padding-top: 300px;
     @media (max-width: 768px) {
+      padding-top: 110px;
       font-size: 2.5em;
     }
   }

@@ -1,2 +1,40 @@
 @import "navbar";
 @import "hero";
+
+#about {
+  margin-top: -20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #21b2a6;
+  color: #c7ebe8;
+  h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+  hr {
+    width: 100px;
+  }
+}
+
+#services {
+  margin-top: -27px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #2e3842;
+  color: #fff;
+  h2, h3 {
+    font-size: 2em;
+    text-align: center;
+  }
+  hr {
+    width: 100px;
+  }
+}
+
+#mailing-list {
+  margin-top: -20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #505393;
+  color: #fff;
+}

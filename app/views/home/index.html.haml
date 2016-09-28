@@ -3,53 +3,48 @@
     %h1.center-align.white-text Connecting Refugees With Locals
     %hr
     %p.center-align.white-text.col.s8.offset-s2 ERefuge connects locals with refugees for simple social interactions. This could be an afternoon coffee, walk in the park, a visit to a museum or whatever your saturday afternoon brings you.
-    = link_to "Create A New Account Now", new_user_registration_path, {:class => "col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn-large hero-signup center-align"}
+    - if !current_user
+      = link_to "Create A New Account Now", new_user_registration_path, {:class => "col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn-large hero-signup center-align"}
 
 
 %section#about.bg-primary
   .container
     .row
-      .col-lg-8.col-lg-offset-2.text-center
-        %h2.section-heading HackZurich project to help refugees integrate
+      .col.l8.offset-l2.center-align
+        %h2.section-heading ERefuge is a social networking app that creates cultural exchanges among locals and refugees.
         %hr.light/
-        %p.text-faded We worked on this project during the HackZurich15 hackathon on the 2-4 October in Zurich. Everything you see here is open source - feel free to clone it, fork it, or send us pull requests!
-        %a.btn.btn-default.btn-xl{:href => "https://github.com/RefugeeMatchmaking/HackZurich"}
-          %i.fa.fa-github.fa-lg
-          See our Github
+        %p.text-faded There's so much to love about different cultures, and sharing those experiences will help refugees integrate to their new home as well as broaden the horizons of locals as well.
+        = link_to "Sign Up", new_user_registration_path, {:class => "waves-effect waves-light btn blue darken-2"}
 %section#services
   .container
     .row
-      .col-lg-12.text-center
+      .col.l12
         %h2.section-heading Connecting Communities
-        %hr.primary/
-  .container
-    .row
-      .col-lg-3.col-md-6.text-center
-        .service-box
-          %i.fa.fa-4x.fa-check-square-o.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
-          %h3 Apply online
-          %p.text-muted Apply as a local or as a refugee in just a matter of minutes, and get a match from an algorith designed to keep you safe.
-      .col-lg-3.col-md-6.text-center
-        .service-box
-          %i.fa.fa-4x.fa-coffee.wow.bounceIn.text-primary{"data-wow-delay" => ".1s"}
-          %h3 Meet for coffee
-          %p.text-muted Have a chat with some other members of your community and those who are just arriving. See how you can help each other.
-      .col-lg-3.col-md-6.text-center
-        .service-box
-          %i.fa.fa-4x.fa-users.wow.bounceIn.text-primary
-          %h3 Build relationships
-          %p.text-muted It's not with community centers that you will rebuild communities. It's with face-to-face communication and friendship.
-      .col-lg-3.col-md-6.text-center
-        .service-box
-          %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary{"data-wow-delay" => ".3s"}
-          %h3 Spread the love
-          %p.text-muted Everyone deserves to be treated with dignity and respect. Some of us fell into an unfortunate situation, let's help them out!
-.bg-dark-credits
-  %p.bg-dark-credits
-    Images Courtesy of
-    %a{:href => "https://ueberdentellerrandkochen.de/"} Über Den Tellerrand
-%aside.bg-dark
-  .container.text-center
+        %hr
+  .row
+    .col.l3.col.m6.center-align
+      .service-box
+        %i{:class =>"medium material-icons"} check_circle
+        %i.fa.fa-4x.fa-check-square-o.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
+        %h3 Apply online
+        %p.text-muted Apply as a local or as a refugee in just a matter of minutes, and get a match from an algorith designed to keep you safe.
+    .col.l3.col.m6.center-align
+      .service-box
+        %i{:class =>"medium material-icons"} local_cafe
+        %h3 Meet for coffee
+        %p.text-muted Have a chat with some other members of your community and those who are just arriving. See how you can help each other.
+    .col.l3.col.m6.center-align
+      .service-box
+        %i{:class =>"medium material-icons"} people
+        %h3 Build relationships
+        %p.text-muted It's not with community centers that you will rebuild communities. It's with face-to-face communication and friendship.
+    .col.l3.col.m6.center-align
+      .service-box
+        %i{:class =>"medium material-icons"} favorite
+        %h3 Spread the love
+        %p.text-muted Everyone deserves to be treated with dignity and respect. Some of us fell into an unfortunate situation, let's help them out!
+%section#mailing-list
+  .container.center-align
     .call-to-action
       %h2 Sign up for our mailing list!
       / Begin MailChimp Signup Form
@@ -67,20 +62,3 @@
               %input{:name => "b_f8465df525b3d0b20a32b7e27_16db1bb259", :tabindex => "-1", :type => "text", :value => ""}/
             .clear
   / End mc_embed_signup
-%section#contact
-  .container
-    .row
-      .col-lg-8.col-lg-offset-2.text-center
-        %h2.section-heading Do more
-        %hr.primary/
-        %p Ready to take on the adventure? Join our team or help us by contributing on our github, or in other means. We're always looking for more ways that we can help people who are desperately in need through technological means.
-      .col-lg-4.col-lg-offset-2.text-center
-        %i.fa.fa-github.fa-3x.wow.bounceIn
-        %p
-          %a.btn.btn-default.btn-xl{:href => "https://github.com/RefugeeMatchmaking/HackZurich"}
-            %i.fa.fa-github
-            RefugeeMatchmaking
-      .col-lg-4.text-center
-        %i.fa.fa-envelope-o.fa-3x.wow.bounceIn{"data-wow-delay" => ".1s"}
-        %p
-          %a{:href => "mailto:team@hackzuri.ch"} team@hackzuri.ch
