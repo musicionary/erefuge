@@ -1,0 +1,7 @@
+.row
+  .col.s6.offset-s3
+    = simple_form_for @chat_room do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :title, required: true, autofocus: true, class: 'form-control'
+      = f.button :submit, {class: 'btn btn-primary'}

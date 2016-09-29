@@ -8,6 +8,5 @@ Rails.application.routes.draw do
 
   resources :events
 
-  resources :accounts
-
+  resources :chat_rooms, only: [:new, :create, :show, :index]
 end

@@ -1,0 +1,15 @@
+Remove edit buttons from events#index.
+
+Move edit capability to user's account page - list events that belong to that user.
+
+Add avatar - paperclip to account model & account page.
+
+Add confirmable & emailing to devise and link redirection to account recreation.
+
+Style emails sent.
+
+Add chat capability with route that belongs to account (index accounts all? how do i create an route that displays a chat system between certain accounts? Chat model with many to many relationship with accounts?)
+
+Styling of forms and other pages.
+
+Google translate API? If no, then google maps api on event list.

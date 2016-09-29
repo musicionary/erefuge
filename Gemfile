@@ -19,6 +19,7 @@ gem 'react-rails', '~> 1.0'
 gem 'devise'
 gem 'cancancan'
 gem 'rails_admin', '~> 1.0'
+gem 'redis', '~> 3.2'
 
 
 group :development, :test do

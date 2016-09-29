@@ -12,8 +12,8 @@ account_list = [
 ]
 
 user_list = [
-  [ "bobthetomato", "bob@tomato.com", "1through9"],
-  [ "larrythecucumber", "larry@cucumber.com", "1through9"],
+  [ "bobthetomato", "bob@tomato.com", "1through9", 1],
+  [ "larrythecucumber", "larry@cucumber.com", "1through9", 2],
 ]
 
 event_list.each do |name, date, description, street, city, state, zip, user|
@@ -25,5 +25,5 @@ account_list.each do |first_name, last_name, user|
 end
 
 user_list.each do |user_name, email, password, account|
-  User.create( user_name: user_name, email: email, password: password)
+  User.create( user_name: user_name, email: email, password: password, account_id: account)
 end
