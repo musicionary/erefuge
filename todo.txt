@@ -13,3 +13,7 @@ Add chat capability with route that belongs to account (index accounts all? how 
 Styling of forms and other pages.
 
 Google translate API? If no, then google maps api on event list.
+
+Configure sendgrid
+
+Configure s3 for paperclip

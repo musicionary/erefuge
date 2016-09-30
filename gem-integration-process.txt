@@ -39,3 +39,66 @@ add to ApplicationController:
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, :alert => exception.message
   end
+
+
+  jQuery(document).on 'turbolinks:load', ->
+    messages = $('#messages')
+    if $('#messages').length > 0
+      #chat window auto scrolls to new messages
+      messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
+      messages_to_bottom()
+
+      App.global_chat = App.cable.subscriptions.create {
+        channel: "ChatRoomsChannel"
+        chat_room_id: messages.data('chat-room-id')
+        },
+        connected: ->
+          # Called when the subscription is ready for use on the server
+
+        disconnected: ->
+          # Called when the subscription has been terminated by the server
+
+        received: (data) ->
+          # Data received
+          messages.append data['message']
+          #scroll to the bottom once a new message has arrived (because by default it won’t be focused):
+          messages_to_bottom()
+
+
+
+        send_message: (message, chat_room_id) ->
+          @perform 'send_message', message: message, chat_room_id: chat_room_id
+
+
+      # When the form is submitted, take the message’s body, check that its length is at least two and then call the send_message function to broadcast the new message to all visitors of the chat room. Next, clear the textarea and prevent form submission.
+      $('#new_message').submit(e) ->
+        $this = $(this)
+        textarea = $this.find("#message_body")
+        if $.trim(textarea.val()).length > 1
+          App.global_chat.send_message textarea.val(), messages.data('chat-room-id')
+          textarea.val('')
+        e.preventDefault()
+        return false
+
+
+
+
+
+#chatrooms channel
+class ChatRoomsChannel < ApplicationCable::Channel
+  #subscribed is a special method to start streaming from a channel with a given name. As long as we have multiple rooms, the channel’s name will vary. Remember, we provided chat_room_id: messages.data('chat-room-id') when subscribing to a channel in our script? Thanks to it, chat_room_id can be fetched inside the subscribed method by calling params['chat_room_id'].
+  def subscribed
+    stream_from "chat_rooms_#{['chat_room_id']}_channel"
+  end
+
+  def unsubscribed
+    # Any cleanup needed when channel is unsubscribed
+  end
+
+  #Once we receive a message, save it to the database. You don’t even need to check whether the provided chat room exists – by default, in Rails 5, a record’s parent must exist in order to save it
+
+  #The last method – send_message – fires when we run @perform 'send_message', message: message, chat_room_id: chat_room_id from our script. The data variable contains a hash of sent data, so, for example, to access the message you would type data['message'].
+  def send_message(data)
+    current_user.messages.create!(body: data['message'], chat_room_id: data['chat_room_id'])
+  end
+end

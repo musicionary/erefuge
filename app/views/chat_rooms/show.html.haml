@@ -1,5 +1,15 @@
-%h1
-  = @chat_room.title
+.container
+  %h1
+    = @chat_room.title
 
-.messages
-  = render @chat_room.messages
+  #messages{"data-chat-room-id" => @chat_room.id}
+    = render @chat_room.messages
+
+  .row
+    .col.s12.m4
+      = simple_form_for @message, url: '#' do |f|
+        .form-inputs
+          =f.input :body
+          %small From 2 to 1000 characters
+
+        =f.button :submit, "Post", {class: 'btn'}

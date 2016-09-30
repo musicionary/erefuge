@@ -1,10 +1,10 @@
 .col.s12.m7
-  %h2.header Horizontal Card
+  %h2.header
   .card.horizontal
     .card-image
       %img{:src => "http://lorempixel.com/100/190/nature/6", :alt => ""}/
     .card-stacked
       .card-content
-        %span= "#{message.account.first_name} at #{message.timestamp} says"
+        %span= "#{message.user.account.first_name} #{message.user.account.last_name} at #{message.timestamp} says"
         %br
         %p= message.body
