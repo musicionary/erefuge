@@ -1,9 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 event_list = [
-  [ "Coffee Gathering", "2017-01-10 22:30:00 UTC", "We're hosting a simple get together at our coffeeshop to have icebreaker time.", "123 Main St.", "Portland", "OR", "97006", 1 ],
-  [ "Dinner Gathering", "2017-01-09 22:30:00 UTC", "We're hosting a dinner to trade recipes.", "123 Main St.", "Portland", "OR", "97006", 1 ],
-  [ "Dinner Gathering", "2017-01-09 22:30:00 UTC", "We're hosting a dinner to trade recipes.", "123 Main St.", "Portland", "OR", "97006", 2 ]
+  [ "Coffee Gathering", "2017-01-10 22:30:00 UTC", "We're hosting a simple get together at our coffeeshop to have icebreaker time.", "605 Scioto Drive", "Louisville", "KY", "40223", 1 ],
+  [ "Dinner Gathering", "2017-01-09 22:30:00 UTC", "We're hosting a dinner to trade recipes.", "605 Scioto Drive", "Louisville", "KY", "40223", 1 ],
+  [ "Dinner Gathering", "2017-01-09 22:30:00 UTC", "We're hosting a dinner to trade recipes.", "605 Scioto Drive", "Louisville", "KY", "40223", 2 ]
 ]
 
 account_list = [

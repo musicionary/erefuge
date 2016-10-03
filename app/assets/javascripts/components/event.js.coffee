@@ -42,9 +42,10 @@
         className: "card"
         React.DOM.div
           className: "card-image waves-effect waves-block waves-light"
-          React.DOM.img
-            className: "activator"
-            src: "../images/coffee.jpeg"
+          React.DOM.iframe
+            className: ""
+
+            src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyAG-ySQ04kts2AnablMVVkD32vDu74jJ_4&q=#{@props.event.street + @props.event.city + @props.event.state + @props.event.zip_code}"
         React.DOM.div
           className: "card-content"
           React.DOM.span

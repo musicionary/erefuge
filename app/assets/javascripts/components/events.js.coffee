@@ -29,9 +29,9 @@
       React.DOM.div
         className: "row"
         React.DOM.aside
-          className: "col s3"
+          className: "col l3"
           React.createElement EventForm, handleNewEvent: @addEvent
         React.DOM.section
-          className: "col s9"
+          className: "col l9"
           for event in @state.events
             React.createElement Event, key: event.id, event: event, handleDeleteEvent: @deleteEvent, handleEditEvent: @updateEvent
