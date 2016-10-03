@@ -1,6 +1,7 @@
 = render 'layouts/errors', :object => @account
 
 = simple_form_for @account do |f|
+  = f.input :avatar, as: :file
   = f.input :first_name
   = f.input :last_name
   = f.button :submit
