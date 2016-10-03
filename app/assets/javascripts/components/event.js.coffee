@@ -44,7 +44,6 @@
           className: "card-image waves-effect waves-block waves-light"
           React.DOM.iframe
             className: ""
-
             src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyAG-ySQ04kts2AnablMVVkD32vDu74jJ_4&q=#{@props.event.street + @props.event.city + @props.event.state + @props.event.zip_code}"
         React.DOM.div
           className: "card-content"
@@ -71,10 +70,6 @@
           React.DOM.p
             @props.event.description
           React.DOM.p null, @props.event.date
-          React.DOM.p null, @props.event.street
-          React.DOM.p null, @props.event.city
-          React.DOM.p null, @props.event.state
-          React.DOM.p null, @props.event.zip_code
           React.DOM.a
             className: 'waves-effect waves-light btn'
             onClick: @handleToggle

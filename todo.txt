@@ -12,10 +12,12 @@ Add chat capability with route that belongs to account (index accounts all? how 
 
 Styling of forms and other pages.
 
-google maps api on event list?
-
 Configure sendgrid
 
 Configure s3 for paperclip
 
 Figure out logging in by username OR email
+
+Figure out how to load ENV variable into react for google maps
+
+Create "Go to event" button that adds account id to event join table
