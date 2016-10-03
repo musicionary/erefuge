@@ -21,8 +21,6 @@ gem 'cancancan'
 gem 'rails_admin', '~> 1.0'
 #Used for production actioncable
 gem 'redis', '~> 3.2'
-#Facebook Authentication
-gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'byebug', platform: :mri
