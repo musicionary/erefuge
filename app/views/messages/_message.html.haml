@@ -1,8 +1,8 @@
 .col.s12.m7
-  %h2.header
+  -# %h2.header
   .card.horizontal
     .card-image
-      %img{:src => "http://lorempixel.com/100/190/nature/6", :alt => ""}/
+      =image_tag message.user.account.avatar.url(:thumb)
     .card-stacked
       .card-content
         %span= "#{message.user.account.first_name} #{message.user.account.last_name} at #{message.timestamp} says"

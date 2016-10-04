@@ -1,6 +1,9 @@
 @import "materialize";
 @import "home/index";
+@import "chatroom/index";
 
+
+// Creates sticky footer
 html {
   height: 100%;
 }
