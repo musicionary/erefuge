@@ -1,8 +1,8 @@
 .hero
   .row
-    %h1.center-align.white-text Connecting Refugees With Locals
+    %h1.center-align Connecting Refugees With Locals
     %hr
-    %p.center-align.white-text.col.s8.offset-s2 ERefuge connects locals with refugees for simple social interactions. This could be an afternoon coffee, walk in the park, a visit to a museum or whatever your saturday afternoon brings you.
+    %p.center-align.col.s8.offset-s2 ERefuge connects locals with refugees for simple social interactions. This could be an afternoon coffee, walk in the park, a visit to a museum or whatever your saturday afternoon brings you.
     - if !current_user
       = link_to "Create A New Account Now", new_user_registration_path, {:class => "col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn-large hero-signup center-align"}
 
@@ -26,8 +26,8 @@
       .service-box
         %i{:class =>"medium material-icons"} check_circle
         %i.fa.fa-4x.fa-check-square-o.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
-        %h3 Apply online
-        %p.text-muted Apply as a local or as a refugee in just a matter of minutes, and get a match from an algorith designed to keep you safe.
+        %h3 Create A Profile
+        %p.text-muted When you sign up, you'll have immediate access to see events that are being hosted in your area. You can join an already existing event, or create your own to host refugees.
     .col.l3.col.m6.center-align
       .service-box
         %i{:class =>"medium material-icons"} local_cafe

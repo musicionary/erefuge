@@ -37,7 +37,7 @@
 
   eventRow: ->
     React.DOM.div
-      className: "col s12 m6"
+      className: "col s12 l6"
       React.DOM.div
         className: "card"
         React.DOM.div

@@ -2,8 +2,6 @@ Remove edit buttons from events#index.
 
 Move edit capability to user's account page - list events that belong to that user.
 
-Add avatar - paperclip to account model & account page.
-
 Add confirmable & emailing to devise and link redirection to account recreation.
 
 Style emails sent.
