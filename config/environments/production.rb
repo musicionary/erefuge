@@ -89,7 +89,7 @@ Rails.application.configure do
 
   config.action_cable.url = "wss://erefuge.herokuapp.com/cable"
 
-  config.action_mailer.default_url_options = { :host => 'flickr-clone-rails.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'erefuge.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "25",
