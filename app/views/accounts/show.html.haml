@@ -1,10 +1,13 @@
-%p= @account.first_name
-%p= @account.last_name
-
-%p
-  = link_to "Edit", edit_account_path(@account)
-%p
-  = link_to "Delete", account_path(@account), :data => {:confirm => "You sure?", :method => "delete"}
-
-%p
-  = link_to "Edit User Info", edit_user_registration_path(current_user)
+.row
+  .col.s12.m4
+    = image_tag @account.avatar.url(:medium), {:class => "responsive-img"}
+  .col.s12.m8
+    %h4= "#{@account.first_name} #{@account.last_name}"
+    %p
+      = link_to "Edit Account", edit_account_path(@account), {:class => "btn amber"}
+      = link_to "Delete Account", account_path(@account), {:class => "btn red", :data => {:confirm => "You sure?", :method => "delete"}}
+      = link_to "Edit User Info", edit_user_registration_path(current_user), {:class => "btn"}
+.container
+  .row
+    .col.s12
+      %h4 Your Events

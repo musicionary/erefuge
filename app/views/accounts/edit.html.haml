@@ -1,2 +1,4 @@
-= render 'form'
-= link_to "Cancel", account_path(@account)
+.container
+  %h4 Edit Account Info
+  = render 'form'
+  = link_to "clear", account_path(@account), {:class => "btn red"}

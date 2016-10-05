@@ -2,8 +2,9 @@
   %h1
     = @chat_room.title
 
-  #messages{"data-chat-room-id" => @chat_room.id}
-    = render @chat_room.messages
+  .row
+    #messages{"data-chat-room-id" => @chat_room.id}
+      = render @chat_room.messages
 
   .row
     .col.s12.m4

@@ -14,4 +14,6 @@
       = flash[:alert]
     - if flash[:notice]
       = flash[:notice]
-    = yield
+    .content
+      = yield
+    = render "layouts/footer"

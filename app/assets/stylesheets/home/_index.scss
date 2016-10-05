@@ -9,7 +9,7 @@
   color: #c7ebe8;
   h2 {
     font-size: 2em;
-    color: #fff;
+    color: #eee;
   }
   hr {
     width: 100px;
@@ -21,7 +21,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #2e3842;
-  color: #fff;
+  color: #eee;
   h2, h3 {
     font-size: 2em;
     text-align: center;
@@ -35,6 +35,19 @@
   margin-top: -20px;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #505393;
-  color: #fff;
+  background-color: #ececec;
+  color: #000;
+}
+
+footer {
+  background-color: #1e5f6e;
+  color: #d7d7d7;
+  height: 200px;
+  h5 {
+    padding-top: 30px;
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 1em;
+  }
 }

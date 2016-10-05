@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :user_name, presence: true, length: { minimum: 4, maximum: 16 }
+
+  #associations
   has_many :events
   has_one :account
   has_many :chat_rooms, dependent: :destroy
