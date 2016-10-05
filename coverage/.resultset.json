@@ -120,6 +120,14 @@
         null,
         1
       ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/config/spring.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        5
+      ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/config/environments/test.rb": [
         1,
         null,
@@ -576,6 +584,11 @@
         null,
         null
       ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/config/initializers/redis.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/config/initializers/session_store.rb": [
         null,
         null,
@@ -774,6 +787,9 @@
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/helpers/events_helper.rb": [
         1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/config/routes.rb": [
@@ -789,6 +805,7 @@
         null,
         1,
         null,
+        1,
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/models/user.rb": [
@@ -798,6 +815,10 @@
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         1,
@@ -824,8 +845,41 @@
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/channels/application_cable/connection.rb": [
+        null,
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/channels/chat_rooms_channel.rb": [
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -880,6 +934,38 @@
         1,
         1,
         9,
+        null,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/controllers/chat_rooms_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -938,6 +1024,10 @@
         null,
         null
       ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/controllers/messages_controller.rb": [
+        1,
+        null
+      ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/controllers/registrations_controller.rb": [
         1,
         1,
@@ -959,6 +1049,22 @@
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/jobs/application_job.rb": [
         1,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/jobs/message_broadcast_job.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/mailers/application_mailer.rb": [
@@ -1013,6 +1119,17 @@
         1,
         null,
         1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/models/chat_room.rb": [
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/models/event.rb": [
@@ -1021,7 +1138,29 @@
         1,
         null
       ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/app/models/message.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/factories/accounts.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/factories/chat_rooms.rb": [
         1,
         1,
         1,
@@ -1034,6 +1173,15 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/factories/messages.rb": [
         1,
         1,
         1,
@@ -1286,6 +1434,12 @@
         null,
         null
       ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/models/chat_room_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/models/event_spec.rb": [
         1,
         null,
@@ -1293,6 +1447,12 @@
         1,
         14,
         null,
+        null
+      ],
+      "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
         null
       ],
       "/Users/chipcarnes/Documents/epicodus-projects/erefuge/spec/models/user_spec.rb": [
@@ -1303,6 +1463,6 @@
         null
       ]
     },
-    "timestamp": 1475103372
+    "timestamp": 1475639170
   }
 }

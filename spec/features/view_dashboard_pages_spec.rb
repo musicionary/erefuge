@@ -6,7 +6,7 @@ describe "the admin dashboard process" do
     admin = FactoryGirl.create(:admin)
     login_as(admin, :scope => :user)
     visit root_path
-    click_on "Admin"
+    click_on "nav-admin"
 
     expect(page).to have_content "Dashboard"
   end

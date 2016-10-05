@@ -23,7 +23,7 @@ gem 'rails_admin', '~> 1.0'
 gem 'redis', '~> 3.2'
 #image uploads
 gem "paperclip", "~> 5.0.0"
-
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri
