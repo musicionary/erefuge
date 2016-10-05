@@ -23,3 +23,5 @@ Create "Go to event" button that adds account id to event join table
 Add chat room and event association (one to one), with a button on the events page to create a chat room (only if the person(via account model) is attending(associated id) to that event(validate in controller of chat))
 
 Ask mike about admin redirect problem and capybara test
+
+Configure date for event forms and displaying the date
