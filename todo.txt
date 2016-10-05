@@ -17,3 +17,5 @@ Configure sendgrid
 Configure s3 for paperclip
 
 Figure out logging in by username OR email
+
+Compress images
