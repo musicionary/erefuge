@@ -89,6 +89,16 @@ Rails.application.configure do
 
   config.action_cable.url = "wss://erefuge.herokuapp.com/cable"
 
+  config.action_mailer.default_url_options = { :host => 'flickr-clone-rails.herokuapp.com' }
+  ActionMailer::Base.smtp_settings = {
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
+  }
+
   config.paperclip_defaults = {
     storage: :s3,
     # :s3_host_name => 's3-us-west-2.amazonaws.com',
