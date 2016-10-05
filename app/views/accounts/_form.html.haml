@@ -1,7 +1,7 @@
 = render 'layouts/errors', :object => @account
 .row
   .col.s8
-    = simple_form_for @account, html: {multipart: true} do |f|
+    = simple_form_for @account, :html => { :multipart => true } do |f|
       .file-field.input-field
         .btn
           %span Add Avatar
