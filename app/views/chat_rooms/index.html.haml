@@ -1,7 +1,8 @@
-%h1 ChatRooms
-
-%p{ :class =>"lead" }
-  = link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary'
-
-%ul
-  = render @chat_rooms
+.container
+  .row
+    .col.s12.center-align
+      %h1 ChatRooms
+      %p{ :class =>"lead" }
+        = link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary'
+      %ul
+        = render @chat_rooms

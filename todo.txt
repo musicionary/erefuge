@@ -10,8 +10,6 @@ Add chat capability with route that belongs to account (index accounts all? how 
 
 Styling of forms and other pages.
 
-Configure sendgrid
-
 Figure out logging in by username OR email
 
 Create "Go to event" button that adds account id to event join table

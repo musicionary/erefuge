@@ -1,16 +1,14 @@
-.container
-  %h1
-    = @chat_room.title
+%h1.center-align= @chat_room.title
 
-  .row
-    #messages{"data-chat-room-id" => @chat_room.id}
-      = render @chat_room.messages
+.row
+  #messages{"data-chat-room-id" => @chat_room.id}
+    = render @chat_room.messages
 
-  .row
-    .col.s12.m4
-      = simple_form_for @message, url: '#' do |f|
-        .form-inputs
-          =f.input :body
-          %small From 2 to 1000 characters
+  .col.s12.m4.offset-m1
+    = simple_form_for @message, url: '#' do |f|
+      .input-field
+        =f.label "Your message:"
+        =f.text_field :body, {class: 'materialize-textarea'}
+        %small From 2 to 1000 characters
 
-        =f.button :submit, "Post", {class: 'btn'}
+      =f.button :submit, "Post", {class: 'btn'}
