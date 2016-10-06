@@ -4,6 +4,7 @@ class AccountsController < ApplicationController
   def show
     current_user
     @account = Account.find(params[:id])
+    @events = current_user.events
   end
 
   def new

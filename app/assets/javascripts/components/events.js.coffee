@@ -23,7 +23,7 @@
     React.DOM.div
       className: 'events'
       React.DOM.h2
-        className: 'name center-align events-header'
+        className: 'name center-align events-header grey-text text-lighten-5'
         'Upcoming Events'
       React.DOM.div
         className: "row"

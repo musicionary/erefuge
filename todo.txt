@@ -8,8 +8,6 @@ Style emails sent.
 
 Add chat capability with route that belongs to account (index accounts all? how do i create an route that displays a chat system between certain accounts? Chat model with many to many relationship with accounts?)
 
-Styling of forms and other pages.
-
 Figure out logging in by username OR email
 
 Create "Go to event" button that adds account id to event join table
