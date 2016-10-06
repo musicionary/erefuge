@@ -1,5 +1,5 @@
 .col.s12.m4
-  .card.blue-grey.lighten-4
-    .card-content.white-text
+  .card.teal.lighten-5
+    .card-content
       %li
-        = link_to "Enter #{chat_room.title}", chat_room_path(chat_room)
+        %h4= link_to "Enter #{chat_room.title}", chat_room_path(chat_room), {class: "blue-text"}

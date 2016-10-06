@@ -3,5 +3,6 @@
     = simple_form_for @chat_room do |f|
       = f.error_notification
       .input-field
-        = f.input :title, required: true, autofocus: true
+        = f.label "Message Board Title"
+        = f.text_field :title, required: true, autofocus: true
       = f.button :submit, {class: 'btn btn-primary'}

@@ -23,13 +23,12 @@
     React.DOM.div
       className: 'events'
       React.DOM.h2
-        className: 'name center-align'
+        className: 'name center-align events-header'
         'Upcoming Events'
-      React.DOM.hr null
       React.DOM.div
         className: "row"
         React.DOM.aside
-          className: "col l3 m6"
+          className: "col l3 m6 white"
           React.DOM.h3 null,
             "Create An Event"
           React.createElement EventForm, handleNewEvent: @addEvent

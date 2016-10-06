@@ -1,9 +1,8 @@
-.col.s12.m6.offset-m1
-  .card.horizontal
-    .card-image
-      =image_tag message.user.account.avatar.url(:thumb)
-    .card-stacked
-      .card-content
-        %span= "#{message.user.account.first_name} #{message.user.account.last_name} at #{message.timestamp} says"
-        %br
-        %p= message.body
+.card.horizontal
+  .card-image
+    =image_tag message.user.account.avatar.url(:thumb)
+  .card-stacked
+    .card-content
+      %span= "#{message.user.account.first_name} #{message.user.account.last_name} at #{message.timestamp} says"
+      %br
+      %p= message.body
