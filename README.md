@@ -26,7 +26,7 @@ $ git remote remove origin
 
 Make sure PostgreSQL is running on your local machine, then setup the database:
 ```
-$ rails db:create:all
+$ rails db:setup
 $ rails db:migrate
 ```
 
